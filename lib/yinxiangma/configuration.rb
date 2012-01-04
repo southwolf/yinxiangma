@@ -17,7 +17,7 @@ module Yinxiangma
       @reg_url        = YINXIANGMA_REGISTER_URL
 
       @publisher_key  = ENV['YINXIANGMA_PUBLISHER_KEY']
-      @mode           = ENV['YINXIANGMA_DISPLAY_MODE']
+      @mode           = ENV['YINXIANGMA_DISPLAY_MODE'] ||= YINXIANGMA_DISPLAY_MODE
     end
     
   end

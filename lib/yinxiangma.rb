@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 require "yinxiangma/configuration"
 require "yinxiangma/client_helper"
+require "yinxiangma/valid"
 
 module Yinxiangma
   YINXIANGMA_API_SERVER_URL = 'http://www.yinxiangma.com/api/'
@@ -27,5 +28,5 @@ module Yinxiangma
 end
 
 if defined?(Rails)
-  require 'yinxiangma/rails'
+  require "yinxiangma/rails"
 end

@@ -4,8 +4,8 @@ require File.expand_path('../lib/yinxiangma/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["SouthWolf"]
   gem.email         = ["wp.southwolf@gmail.com"]
-  gem.summary     = %q{Helpers for the YinXiangMa CAPTCHA API}
-  gem.description = %q{This plugin adds helpers for the YinXiangMa CAPTCHA API}
+  gem.summary       = %q{Helpers for the YinXiangMa CAPTCHA API}
+  gem.description   = %q{This plugin adds helpers for the YinXiangMa CAPTCHA API}
   gem.homepage      = "http://www.yinxiangma.com"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
