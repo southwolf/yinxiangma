@@ -92,7 +92,7 @@ This method returns +true+ or +false+ after processing the parameters from the Y
 
 = 印象码 动态验证码
 
-{印象码}[http://www.yinxiangma.com]是目前中国国内推出的第一款视频广告验证码云服务平台，不仅提供了安全的基于云计算的视频验证码服务，为网站提供了良好的验证码用户体验，并且提出了新一代的基于用户反馈的广告计费商业模式概念。
+{印象码}[http://www.yinxiangma.com] 是目前中国国内推出的第一款视频广告验证码云服务平台，不仅提供了安全的基于云计算的视频验证码服务，为网站提供了良好的验证码用户体验，并且提出了新一代的基于用户反馈的广告计费商业模式概念。
 
 本gem提供了Rails下的印象码功能，配置简单。
 
