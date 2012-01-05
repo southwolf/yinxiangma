@@ -4,6 +4,8 @@ require "yinxiangma/client_helper"
 require "yinxiangma/valid"
 
 module Yinxiangma
+  
+  
   YINXIANGMA_API_SERVER_URL = 'http://www.yinxiangma.com/api/'
   YINXIANGMA_REGISTER_URL   = 'http://www.yinxiangma.com/server/register.php'
   YINXIANGMA_TOKEN_URL      = 'yzm.token.php'

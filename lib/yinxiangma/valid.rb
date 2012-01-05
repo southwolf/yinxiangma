@@ -1,6 +1,7 @@
+# -*- encoding : utf-8 -*-
 module Yinxiangma
   module Valid
-    def yxm_valid
+    def yinxiangma_valid
       valid_uri = "http://www.yinxiangma.com/api/yzm.valid.php"
       http = Net::HTTP
       answer, error = http.post_form(URI.parse(valid_uri), {
@@ -11,7 +12,7 @@ module Yinxiangma
     
       if(answer == 'true')
         return "OK"
-      elseif(answer == 'false')
+      elsif(answer == 'false')
         return error
       end
     end

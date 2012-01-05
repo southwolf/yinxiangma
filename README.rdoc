@@ -1,0 +1,90 @@
+= Yinxiangma CAPTCHA
+
+Author::    SouthWolf
+Copyright:: Copyright (c) 2011 SouthWolf, Yinxiangma Inc.
+License::   {MIT}[http://creativecommons.org/licenses/MIT/]
+Info::      http://github.com/southwolf/yinxiangma
+Git::       http://github.com/southwolf/yinxiangma/tree/master
+Bugs::      http://github.com/southwolf/yinxiangma/issues
+
+This plugin adds helpers for the {YinXiangMa CAPTCHA API}[http://www.yinxiangma.com]. In your
+views you can use the +yinxiangma_tags+ method to embed the needed javascript,
+and you can validate in your controllers with +yinxiangma_valid+.
+
+Beforehand you need to configure YinXiangMa with your custom publisher
+key. You may find detailed examples below. Exceptions will be raised if you
+call these methods and the keys can't be found.
+
+== About this gem
+
+This gem tries to introduces a more convenient way to configure YinXiangMa's
+settings. The structure & style are inspired by {reCAPTCHA gem}[http://ambethia.com/recaptcha] 
+
+== Rails Installation
+
+YinXiangMa for Rails, add this to your Gemfile:
+
+  gem "yinxiangma", :require => "yinxiangma/rails"
+
+Or, it can be installed as a gem:
+
+  config.gem "yinxiangma", :lib => "yinxiangma/rails"
+
+Or, as a standard rails plugin:
+
+  script/plugin install git://github.com/southwolf/yinxiangma.git
+
+== Setting up your API Keys
+
+There are multiple ways to setup your YinXiangMa API key once you
+{obtain}[http://www.yinxiangma.com] one.
+
+=== YinXiangMa.configure
+
+You may use the block style configuration. The following code could be placed
+into a +config/initializers/yinxiangma.rb+ when used in a Rails project.
+
+  Yinxiangma.configure do |config|
+    config.publisher_key  = 'cb9d0fe8dabdea89019d845be3059973'
+    config.mode ='live'
+  end
+  
+
+This way, you may also set additional options to fit YinXiangMa into your
+deployment environment.
+
+=== Shell environment
+
+Or, you can keep your keys out of your code base by exporting the following
+environment variables. You might do this in the .profile/rc, or equivalent for
+the user running your application:
+
+  export YINXIANGMA_PUBLISHER_KEY  = 'cb9d0fe8dabdea89019d845be3059973'
+
+=== Per call
+
+You can also pass in your keys as options at runtime, for example:
+
+  yinxiangma_tags :publisher_key  => 'cb9d0fe8dabdea89019d845be3059973'
+
+This option might be useful, if the same code base is used for multiple
+YinXiangMa setups.
+
+== To use 'YinXiangMa'
+
+Add +yinxiangma_tags+ to each form you want to protect.
+
+And, add +yinxiangma_valid+ logic to each form action that you've protected.
+
+=== +yinxiangma_tags+
+
+This method generate HTML tag including YinXiangMa widget.
+
+=== +yinxiangma_valid+
+
+This method returns +true+ or +false+ after processing the parameters from the YinXiangMa widget. 
+
+== TODO
+
+* Validation Error handlings
+* Better documentation
