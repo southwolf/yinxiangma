@@ -1,5 +1,7 @@
 = YinXiangMa CAPTCHA
 
+http://l.ruby-china.org/photo/6968dfd98b83bb26cba9f50f815b1cdd.png
+
 Author::    SouthWolf
 Copyright:: Copyright (c) 2011 SouthWolf, Yinxiangma Inc.
 License::   {MIT}[http://creativecommons.org/licenses/MIT/]
