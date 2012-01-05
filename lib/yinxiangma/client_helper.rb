@@ -28,7 +28,7 @@ module Yinxiangma
         EOS
       end
             
-      return html
+      return (html.respond_to?(:html_safe) && html.html_safe) || html
     end
     
     def request_token(publisher_key)

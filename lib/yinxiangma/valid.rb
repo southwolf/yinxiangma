@@ -11,9 +11,9 @@ module Yinxiangma
         }).body.split('+')
     
       if(answer == 'true')
-        return "OK"
+        return true
       elsif(answer == 'false')
-        return error
+        return false
       end
     end
   end
